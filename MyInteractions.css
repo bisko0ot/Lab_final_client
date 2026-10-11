@@ -1,0 +1,128 @@
+.interactions-page-container {
+  padding: 1rem 0;
+}
+
+.interactions-list-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.interaction-card {
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: all var(--transition-normal);
+}
+
+.interaction-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-primary-glow);
+}
+
+.interaction-card-body {
+  display: flex;
+  padding: 2rem;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+.interaction-card-main {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.interaction-card-main h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.interaction-card-main .pitch {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  max-width: 550px;
+}
+
+.creator-subtext {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.interaction-card-side {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-shrink: 0;
+  min-width: 150px;
+}
+
+.metrics-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.metric-num {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.metric-lbl {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.interaction-details-btn {
+  width: 100%;
+}
+
+.empty-interactions-state {
+  text-align: center;
+  padding: 5rem 1.5rem;
+  background-color: var(--bg-secondary);
+  border: 1px dashed var(--border-color);
+  border-radius: var(--border-radius-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+  .interaction-card-body {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1.5rem;
+    padding: 1.5rem;
+  }
+  
+  .interaction-card-side {
+    align-items: flex-start;
+    border-top: 1px solid var(--border-color);
+    padding-top: 1rem;
+    min-width: unset;
+  }
+  
+  .metrics-box {
+    align-items: flex-start;
+    margin-bottom: 0.5rem;
+  }
+}
